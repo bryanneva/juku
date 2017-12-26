@@ -1,0 +1,88 @@
+{
+  "name": "juku-workbench",
+  "version": "0.1.0",
+  "description": "implements the juku app in electron with react",
+  "main": "dist/bundle.electron.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "echo 'open two tabs and run yarn electron and yarn dev'",
+    "electron": "electron .",
+    "test": "jest",
+    "dev": "webpack --config ./config/weback.config.js -w",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.31",
+    "juku-core": "1.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/jest": "^21.1.9",
+    "@types/node": "^8.5.2",
+    "@types/webdriverio": "^4.8.7",
+    "babel-cli": "7.0.0-beta.3",
+    "babel-core": "7.0.0-beta.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-babili": "^0.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-node": "^6.1.1",
+    "babel-preset-react": "7.0.0-beta.3",
+    "babel-preset-typescript": "7.0.0-beta.3",
+    "copy-webpack-plugin": "^4.3.1",
+    "electron": "^1.7.10",
+    "electron-builder": "^19.49.2",
+    "eslint": "^4.14.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-typescript": "^0.8.1",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^22.0.4",
+    "spectron": "^3.7.2",
+    "webpack": "^3.10.0"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "react",
+      "prettier",
+      "typescript"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "typescript"
+    ],
+    "plugins": [
+      [
+        "transform-class-properties",
+        {
+          "spec": true
+        }
+      ]
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testMatch": [
+      "**/*.test.(ts|tsx)"
+    ]
+  },
+  "build": {
+    "appId": "tempjuku.id",
+    "mac": {
+      "category": "temp.juku.category.type"
+    }
+  }
+}

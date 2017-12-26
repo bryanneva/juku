@@ -1,0 +1,10 @@
+{
+  "name": "juku-base",
+  "description": "provides UI building blocks for extension",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.6.2"
+  }
+}

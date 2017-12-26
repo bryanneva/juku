@@ -1,0 +1,80 @@
+Arguments: 
+  /Users/bryanneva/.nvm/versions/node/v7.10.0/bin/node /usr/local/Cellar/yarn/1.2.1/libexec/bin/yarn.js install
+
+PATH: 
+  /Users/bryanneva/.nvm/versions/node/v7.10.0/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/bryanneva/.composer/vendor/bin:/usr/local/go/bin
+
+Yarn version: 
+  1.2.1
+
+Node version: 
+  7.10.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "juku-workbench",
+    "version": "0.1.0",
+    "description": "implements the juku app in electron with react",
+    "main": "main.ts",
+    "license": "MIT",
+    "scripts": {
+      "start": "electron .",
+      "dev": "webpack --config ./config/weback.config.js -w",
+      "pack": "electron-builder --dir",
+      "dist": "electron-builder"
+    },
+    "dependencies": {
+      "@types/react": "^16.0.31",
+      "react": "^16.2.0",
+      "react-dom": "^16.2.0",
+    },
+    "devDependencies": {
+      "babel-cli": "^6.26.0",
+      "babel-core": "^6.26.0",
+      "babel-loader": "^7.1.2",
+      "babel-preset-babili": "^0.1.4",
+      "babel-preset-react": "^6.24.1",
+      "copy-webpack-plugin": "^4.3.1",
+      "electron": "^1.7.10",
+      "electron-builder": "^19.49.2",
+      "eslint": "^4.14.0",
+      "eslint-config-prettier": "^2.9.0",
+      "eslint-plugin-prettier": "^2.4.0",
+      "eslint-plugin-react": "^7.5.1",
+      "webpack": "^3.10.0"
+    },
+    "eslintConfig": {
+      "plugins": [
+        "react",
+        "prettier"
+      ]
+    },
+    "babel": {
+      "presets": [
+        "react"
+      ]
+    },
+    "build": {
+      "appId": "tempjuku.id",
+      "mac": {
+        "category": "temp.juku.category.type"
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  SyntaxError: /Users/bryanneva/IdeaProjects/juku/workbench/package.json: Unexpected token } in JSON at position 442
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.2.1/libexec/lib/cli.js:770:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.2.1/libexec/lib/cli.js:92:30)
+      at /usr/local/Cellar/yarn/1.2.1/libexec/lib/cli.js:103:13

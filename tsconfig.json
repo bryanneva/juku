@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./workbench/dist/",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "module": "commonjs",
+    "target": "es6",
+    "allowJs": false
+  },
+  "include": [
+    "./base",
+    "./core",
+    "./workbench"
+  ],
+  "exclude": [
+    "node_modules",
+    "core/node_modules",
+    "base/node_modules",
+    "workbench/node_modules",
+    ".idea",
+    "**/*.test.ts"
+  ]
+}
